@@ -5,12 +5,12 @@
     const mysql = require('mysql2');
 
     const app = express();
-    const port = 5001;
+    const port = 3001;
 
     // MySQL Connection
     const db = mysql.createConnection({
     host: '34.100.191.61',
-    user: 'vidhya',
+    user: 'root',
     password: 'Maybe123',
     database: 'agri'
     });
@@ -172,6 +172,12 @@
     }
     res.json(results);
   });
+});
+app.get('/results', (req, res) => {
+    db.query('SELECT * FROM plant_disease_results', (err, results) => {
+        if (err) throw err;
+        res.json(results);
+    });
 });
 
 
