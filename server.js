@@ -24,7 +24,7 @@
     });
 
     // MQTT Connection
-    const mqttClient = mqtt.connect('mqtt://34.131.27.121:1883');
+    const mqttClient = mqtt.connect('mqtt://34.131.227.56:1883');
 
     // Topics for IoT Data
     const topics = [
